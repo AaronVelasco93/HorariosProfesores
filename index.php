@@ -23,7 +23,7 @@
                         requiredclass="form-control" id="rfc">
                 </div>
                 <div align="center">
-                <button type="submit"  class="btn btn-primary"  style="background-color:black;color:white">Generar
+                <button type="submit"  class="btn btn-primary"  style="background-color:black;color:white;  text-transform: uppercase;">Generar
                     Consulta</button></div>
             </form>
 
