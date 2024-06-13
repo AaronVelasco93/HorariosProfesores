@@ -1,15 +1,15 @@
 <?php
 
-  $host_db = "localhost:3306";
-  $user_db = "root";
-  $pass_db = "123456";
-  $db_name = "horarios_profesores";
+  // $host_db = "localhost:3306";
+  // $user_db = "root";
+  // $pass_db = "123456";
+  // $db_name = "horarios_profesores";
 
 
-//  $host_db = "localhost";
-//  $user_db = "u676715632_aragon";
-//  $pass_db = "icoAragonUnam22";
-//  $db_name = "u676715632_ingenieria";
+  $host_db = "127.0.0.1";
+  $user_db = "u676715632_ftp";
+  $pass_db = "icoAragonUnam22";
+  $db_name = "u676715632_horarios_profe";
 
 
 $conexion = new mysqli($host_db,$user_db,$pass_db,$db_name);
