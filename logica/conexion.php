@@ -3,7 +3,7 @@
   $host_db = "localhost:3306";
   $user_db = "root";
   $pass_db = "123456";
-  $db_name = "ingenieria";
+  $db_name = "horarios_profesores";
 
 
 //  $host_db = "localhost";

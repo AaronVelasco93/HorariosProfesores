@@ -1,28 +1,31 @@
 
-<style>
-   #logo1{
+<body>
+    <div class="">
+        <div class="row encabezado ">
 
-    margin-left:30em;
-}
-</style>
+            <!-- logos -->
+            <div class="col s8 m5 l4 logos ">
+                <div class="contenedorlogos center">
+                    <a href="https://www.unam.mx/">
+                        <div class=""><img src="./assets/img/logomediano.png"></div>
+                    </a>
+                </div>
+            </div>
 
-<nav class="light-blue lighten-1" style="height:100px;"  role="navigation">
-    <div class="nav-wrapper container" >
-        <a href="https://www.aragon.unam.mx/fes-aragon/#!/inicio"> 
-            <img width="110px" class="brand-logo" class="img-fluid" src="assets/img/UNAM-FES-Aragon.jpg" alt="Not Found">
-        </a>
-      <ul class="right hide-on-med-and-down">
-        <li>
-            <a href="http://ingenieria.aragon.unam.mx"> 
-                <img width="110px" class="brand-logo" class="img-fluid" src="assets/img/ICO.jpg" alt="Not Found">
-            </a>    
-        </li>
-      </ul>
 
-      <ul id="nav-mobile" class="sidenav">
-        <li><a href="#">Navbar Link</a></li>
-      </ul>
-      <a href="http://ingenieria.aragon.unam.mx" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">school</i></a>
+
+            <!-- start nav -->
+            <div class="col s12 m5 l6 " id="menu">
+             
+            </div>
+            
+            <div class="col s4 m2 l2 ">
+                <a href="https://sites.google.com/aragon.unam.mx/fesaragonico/inicio?authuser=0">
+                    <div class="logos"><img src="./assets/img/logoico.png"></div>
+                </a>
+            </div>
+
+        </div>
     </div>
-  </nav>
-  
+			
+            

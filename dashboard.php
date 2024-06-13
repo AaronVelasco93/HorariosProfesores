@@ -1,58 +1,47 @@
 <?php
-session_start();
-include 'logica/conexion.php';
-$usuario = $_SESSION['usermane'];
+    session_start();
+    include 'logica/conexion.php';
+    $usuario = $_SESSION['usermane'];
 
 
-if (!isset($usuario)){
+    if (!isset($usuario)){
 
-    header("location: index.php");
-    }else {
+        header("location: index.php");
+        }else {
 
-    mysqli_set_charset($conexion,'utf8');
-    $q=" SELECT * FROM deportivashfc WHERE no_cuenta ='$usuario' ";
-    
-    $consulta= $conexion->query($q);
+        mysqli_set_charset($conexion,'utf8');
+        $q=" SELECT * FROM horarios WHERE rfc ='$usuario' ";
+        
+        $consulta= $conexion->query($q);
 
     ?> 
-
-   <!DOCTYPE html>
-    <html>
-        <style>
-
-.botones {
-    display: flex;
-  justify-content: center;
-}
-        </style>
-        <head>
-            <meta charset="UTF-8">
-            <!--Materialize files-->
-            <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-            <link rel="stylesheet" type="text/css" href="assets/css/materialize.css">
-            <link rel="stylesheet" type="text/css" href="assets/css/estilos.css">
-            <link rel="shortcut icon" href="assets/img/favicon.jpg"/>
-            <title>ACTIVIDADES DEPORTIVAS Y CULTURALES</title>
-        </head>
-          
+  
+  <?php include ('./head.php')?>    
   <body>
 
     <?php include ('./header.php')?>
-  <div class="row" style="margin-top:20px">
+  <div class="row" style="margin-top:20px; margin-left:40px;">
   <div class="col s12"> 
-     <h3 style="text-align:center" >HORAS DE FORMACIÓN COMPLEMENTARIA ING. COMPUTACIÓN</h3>
-     <h4 style="text-align:center" >ACTIVIDADES DEPORTIVAS Y CULTURALES</h4>
+     <h3 style="text-align:center" >CONSULTA DE HORARIOS DE INGENIERÍA EN COMPUTACIÓN</h3>
+     <h4 style="text-align:center" >Semestre 2025-I</h4>
+    
       <table style="width:100%; border:2px">
         <thead>
             <tr>
                 <!--seccion A-->
 
-                <th>Numero</th>
-                <th>Nombre</th>
-                <th>Numero de Cuenta</th>
-                <th>Carrera</th>
-                <th>Horas Totales</th>
-                <th>Semestre</th>
+                <th>CLV MAT</th>
+                <th>Materia</th>
+                <th>Profesor</th>
+                <th>Grupo</th>
+                <th>Lunes</th>
+                <th>Martes</th>
+                <th>Miercoles</th>
+                <th>Jueves</th>
+                <th>Viernes</th>
+                <th>Sabado</th>
+                <th>Salon</th>
+
                               
             </tr>
         </thead>
@@ -62,25 +51,26 @@ if (!isset($usuario)){
     if(mysqli_num_rows($consulta)>0){
         while ($row = mysqli_fetch_assoc($consulta) ) { ?>
             <tr>
-                <td> <?php echo $row ['numero'];   ?></td>
-                <td> <?php echo $row ['Nombre']; ?></td>
-                <td> <?php echo $row ['no_cuenta']; ?></td>
-                <td> <?php echo $row ['carrera'];     ?></td>
-                <td> <?php echo $row ['total_horas'];  ?></td>
-                <td> <?php echo $row ['semestre'];        ?></td>
-                
-            </tr>
+                <td> <?php echo $row ['clv_mat'];?></td>
+                <td> <?php echo $row ['materia'];?></td>
+                <td> <?php echo $row ['profesor'];?></td>
+                <td> <?php echo $row ['grupo'];?></td>
+                <td> <?php echo $row ['lu1'];?> - <?php echo $row ['lu2'];?></td>
+                <td> <?php echo $row ['mar1'];?> - <?php echo $row ['mar2'];?></td>
+                <td> <?php echo $row ['mie1'];?> - <?php echo $row ['mie2'];?></td>
+                <td> <?php echo $row ['jue1'];?> - <?php echo $row ['jue2'];?></td>
+                <td> <?php echo $row ['vie1'];?> - <?php echo $row ['vie2'];?></td>
+                <td> <?php echo $row ['sab1'];?> - <?php echo $row ['sab2'];?></td>
+                <td> <?php echo $row ['salon'];?></td>
 
-<!--PDF Inicio-->
-           
-<!--PDF FIN-->
+            </tr>
 
 
     <?php }        
         } else {
         echo ' 
             <header>
-                <h2 style="text-align:center">Error de Generacion en la constancia </h2>
+                <h2 style="text-align:center">Error de Conexion </h2>
             </header>';
     }
 

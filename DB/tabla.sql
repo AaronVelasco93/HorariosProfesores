@@ -8,23 +8,28 @@ USE `horarios_profesores`;
 
 /*crear nuestra tabla*/
 
-CREATE TABLE `ALUMNO`(
+CREATE TABLE `horarios`(
+    `numero` int (10) not null,
     `clv_mat` text not null,
     `materia` text not null,
-    `profesor` int (10) not null,
+    `profesor` text not null,
     `grupo` text not null,
-    `lu1` text not null,
-    `lu2` text not null,
-    `mar1` text not null,
-    `mar2` text not null,
-    `mie1` text not null,
-    `mie2` text not null,
-    `jue1` text not null,
-    `jue2` text not null,
-    `vie1` text not null,
-    `vie2` text not null,
-    
-
-    
-    `permisos` int (11) not null default '1' 
+    `lu1` text null,
+    `lu2` text null,
+    `mar1` text null,
+    `mar2` text null,
+    `mie1` text null,
+    `mie2` text null,
+    `jue1` text null,
+    `jue2` text null,
+    `vie1` text null,
+    `vie2` text null,
+    `sab1` text null,
+    `sab2` text null,
+    `salon` text null,
+    `cupo` text not null,
+    `rfc` text not null,
+    `correo` text not null    
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
+alter table `horarios`
+    add primary key (`numero`);

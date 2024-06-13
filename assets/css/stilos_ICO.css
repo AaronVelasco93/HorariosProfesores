@@ -1,0 +1,404 @@
+.nav
+{
+position: fixed;
+top: 0px;
+}
+.botones {
+    display: flex;
+  justify-content: center;
+}
+#logo1{
+
+  margin-left:30em;
+}
+
+ul{
+  background-color: white;
+}
+
+/* quienes somos */
+
+.lineaexterior{
+
+  float: left;
+  margin: 0em 0em 0em 3em;
+  padding: 0em 0em 0em -2em;
+  border-left: #E8762A solid 3px;
+}
+
+.lineainterior{
+
+  float: left;
+  margin: 0em 0em 0em 0.3em;
+  padding: 0em 0em 0em 0em;
+  border-left: #E8762A solid 3px;
+  border-bottom: #E8762A solid 3px;
+}
+
+.titulo{
+  
+  margin: 0em 0em 0em 0em;
+  padding: 0em 0em 0em 0em;
+}
+
+.contenedorquienessomos{
+
+  padding:  0em 2em 0em 5em;
+}
+
+.contenedorquienessomoslista{
+  padding:  0em 2em 0em 10em;
+}
+
+/* Fin quienes somos */
+
+
+/*footer inicio*/
+.p_footer_l{
+      
+  margin-top: 0px;
+  margin-bottom:0px;
+  line-height: 25px; 
+ 
+  border-top: 0px;
+  border-right: 2px solid white;
+  border-bottom: 0px;
+  border-left: 0px;
+
+  padding-right: 8px;
+  padding-left: 8px; 
+
+  color:#FFFFFF; 
+  font-weight: bold;
+}
+.p_footer_r{
+  
+  margin-top: 0px;
+  margin-bottom:0px;
+  line-height: 25px; 
+ 
+  border-top: 0px;
+  border-right: 0px;
+  border-bottom: 0px;
+  border-left: 2px solid white;
+
+  padding-right: 8px;
+  padding-left: 8px; 
+
+  color:#FFFFFF; 
+  font-weight: bold;
+}
+.centrado_footer{
+  border: black 0px solid;
+  padding-right: 3px;
+  padding-left: 3px;
+  width: 50%;
+  
+
+}
+/*fin de footer*/
+
+
+/*Horarios alumnos*/
+.alumnos-horarios{
+  text-align: center;
+   color: white; 
+   background-color:#E8762A;  
+   border-bottom: 2px solid #E8762A;
+    padding: 5px 15px;
+}
+
+/* heder */
+
+.encabezado{
+  width:  100%;
+  height:  6em;
+
+}
+
+.contenedorlogos{
+  white-space: nowrap;
+  vertical-align: middle; 
+  width: 100%;
+}
+
+.contenedorlogos img{
+  display: block;
+  float: left;
+  margin: 1px;
+}
+.logos{
+  width: 80%;
+}
+
+
+/* slider */
+
+@font-face {
+  font-family: 'flexslider-icon';
+  src: url('fonts/flexslider-icon.eot');
+  src: url('fonts/flexslider-icon.eot?#iefix') format('embedded-opentype'), url('fonts/flexslider-icon.woff') 
+  format('woff'), url('fonts/flexslider-icon.ttf') format('truetype'), url('fonts/flexslider-icon.svg#flexslider-icon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.contenedorbanner{
+  background: rgba(177,77,77,0.7);
+  z-index: 99;
+}
+/* 
+.flexslider(){
+  width: 100%;
+  position: relative;
+}
+*/
+.slides{
+  width: 100%;
+  overflow: hidden;
+}
+
+.slides img{
+  width: 100%;
+
+}
+
+.slides, .flex-control-nav, .flex-direction-nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.flex-control-nav{
+  width: 100%;
+  text-align: center;
+  margin: 0em 0em 0em 0em;
+}
+
+.flex-control-nav li{
+  display: inline-block;
+  margin: 0 6px;
+}
+
+.flex-control-nav li a{
+  display: block;
+  background: #777777;
+
+  width: 12px;
+  height: 12px;
+  border-radius: 12px;
+  
+  z-index: 99;
+  text-indent: -9999px;
+}
+
+.flex-control-nav li a:hover{
+  background: #2E2E2E;
+}
+
+.flex-control-nav li a.flex-active{
+  background: #2E2E2E;
+}
+
+.flex-direction-nav a{
+  display: block;
+  text-decoration: none;
+  position: absolute;
+  top: 50%;
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  z-index: 99;
+  opacity: 0;
+}
+
+.flex-direction-nav .flex-prev{
+  left: 20px;
+}
+
+.flex-direction-nav .flex-next{
+  right: 20px;
+}
+
+.flex-direction-nav a:before{
+  
+  font-size: 40px;
+  display: inline-block;
+  content: '<';
+  color: #ffffff;
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.flex-direction-nav a.flex-next:before {
+  content: '>';
+}
+
+.flex-caption p{
+  
+  font-size: 45px;
+  color: white;
+  position: absolute;
+  top: 85%;
+  text-align: center;
+  width: 100%;
+}
+
+.flexslider:hover .flex-direction-nav .flex-prev{
+  opacity: 0.7;
+}
+
+.flexslider:hover .flex-direction-nav .flex-prev:hover{
+  opacity: 1;
+}
+
+.flexslider:hover .flex-direction-nav .flex-next{
+  opacity: 0.7;
+}
+
+.flexslider:hover .flex-direction-nav .flex-next:hover{
+  opacity: 1;
+}
+
+/* /slider */
+
+
+
+
+
+
+/* cuestionario para el plan de estudios */
+
+.aCuestionario{
+
+  text-decoration: underline;
+}
+
+.aCuestionario:hover{
+  letter-spacing: 1px;
+  text-decoration: underline;
+}
+
+/* /cuestionario para el plan de estudios */
+
+
+
+/* menu */
+#menu{
+ 
+  margin: 0em 0em 0em 0em;
+  padding: 0.7em 0em 0em 0em;
+  z-index: 200;
+}
+
+#menu ul {
+
+ list-style:none;
+ margin: 2em 0em 0em 0em;
+ padding: 0em 0em 0em 0em;
+ z-index: 999;
+}
+
+/* items del menu */
+
+#menu ul li {
+ 
+  margin: 0em 0em 0em 0em;
+  padding: 0em 0em 0em 0em;
+  height: 2em;
+  position:relative;
+  float:left;
+  margin:0;
+  padding:0;
+}
+
+/* enlaces del menu */
+
+#menu ul a {
+  display:block;
+  text-decoration:none;
+  font-size:12px;
+  margin: 0em 0em 0em 0em;
+  padding: 0em 1em 0.1em 1em;
+  letter-spacing:1px;
+}
+
+
+/* items del menu */
+
+
+
+/* efecto al pasar el ratón por los items del menu */
+
+#menu ul li:hover {
+
+  border-radius: 0em 1em 1em 1em;
+  box-shadow: none;
+}
+
+#menu li>ul{
+  display:none;
+  margin: 0.5em 0em 0em 0em;
+  border-radius: 0em 1em 1em 1em;
+  box-shadow: none;
+}
+
+#menu li>ul li{
+  margin: 0.1em 0.2em 0.1em 0.2em;
+  padding: 0em 0em 0em 0em;
+  width: 15em;
+  
+}
+
+.textolargo {
+  height: 5em;
+}
+
+#menu li:hover>ul{   
+  display:block;
+  position:absolute;
+  
+}
+
+.aaaa{
+  font-family:"HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform:uppercase;
+
+}
+
+
+.bordenaranja:hover{
+  border: 2px solid orange;
+  border-radius: 0em 1em 1em 1em;
+  box-shadow: none;
+}
+
+.bordegris:hover{
+  border: 2px solid grey;
+  border-radius: 0em 1em 1em 1em;
+  box-shadow: none;
+}
+
+.bordenaranja>ul{
+  display:none;
+  margin: 0.5em 0em 0em 0em;
+  border: 2px solid orange;
+  border-radius: 0em 1em 1em 1em;
+  box-shadow: none;
+}
+
+.bordegris>ul{
+  display:none;
+  margin: 0.5em 0em 0em 0em;
+  border: 2px solid grey;
+   border-radius: 0em 1em 1em 1em;
+  box-shadow: none;
+}
+
+
+
+/* /hedaer */

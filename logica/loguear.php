@@ -2,12 +2,12 @@
 session_start();
 include ('conexion.php');
 
-$no_cuenta = $_POST['no_cuenta'];
+$rfc = $_POST['rfc'];
 
 //La función COUNT devuelve el número de filas de la consulta, es decir, el número de registros que cumplen una determinada condición.
 
 //Los valores nulos no serán contabilizados
-$q = "SELECT COUNT(*) AS contar FROM deportivashfc WHERE no_cuenta= '$no_cuenta'";
+$q = "SELECT COUNT(*) AS contar FROM horarios WHERE rfc= '$rfc'";
 
 $consulta = mysqli_query($conexion, $q);
 
@@ -16,7 +16,8 @@ $array = mysqli_fetch_array($consulta);
 if ($array['contar'] > 0) {
 
    // en la variable session se guarda el numero de cuenta esto para poder acarrearla
-    $_SESSION['usermane'] = $no_cuenta;
+    $_SESSION['usermane'] = $rfc;
+    
     
 
     header("location: ../dashboard.php");
@@ -24,6 +25,6 @@ if ($array['contar'] > 0) {
 
 } else {
 
-    header("location: ../loginError.php");
+    header("location: ../index.php");
 }
 ?>
